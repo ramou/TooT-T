@@ -98,8 +98,9 @@ getpredictions_psibasedmodels<-function(fastafile)
     testpredictors<- normalize(testpredictors)
     load( paste0(TooTTdir,"/models/",Texnames[z],"_TvdNT.rda"))
     colnames(testpredictors)<- attr(svm.fit$terms, "term.labels")
+    row.names(testpredictors)<-names(seqs)
     p1<- predict(svm.fit,testpredictors,probability=TRUE)
-    psi_predictions[,z]<- as.vector(p1)
+    psi_predictions[rownames(attr(p1,"probabilities")),z]<- as.vector(p1)
   }
   
   return(psi_predictions)
