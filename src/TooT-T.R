@@ -163,7 +163,7 @@ for(i in args){
                the choice of homology database for psi-compositions, tested using Swiss-Port databses (2018) \n")
            cat("\t\t<database path> defaults to '",db,"'\n", sep="")
            cat("\t<work path> is the path to the working directory for intermediate files. It will be created as needed.\n")
-           cat("\t\t<database path> defaults to '.' ('",work,"')\n", sep="")
+           cat("\t\t<work path> defaults to '.' ('",work,"')\n", sep="")
            cat("\t<TooTTdir> is the directory where the base TooT-T files are located")
            cat("\t\t<TooTTdir> defaults to '",TooTTdir,"'\n", sep="")
            cat("\n")
